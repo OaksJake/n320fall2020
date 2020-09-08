@@ -1,3 +1,6 @@
+//Jake Oaks
+//Ground Rain Project
+
 //count to keep track of tick rate to not spawn too many raindrops at once
 var count = 0;
 //raincount used to keep track of how many drops have touched the ground
