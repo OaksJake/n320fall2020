@@ -12,7 +12,7 @@ var app = new Vue({
     data: {
         books: [
             {id: 1, title: "Harry Potter", author: "J. K. Roweling", cover: "🧙", show: true},
-            {id: 2, title: "Percy Jackson", author: "Rick Riordan", cover: "🧜‍♀️", show: false}
+            {id: 2, title: "Percy Jackson", author: "Rick Riordan", cover: "🌊", show: false}
         ] 
     },
     methods: {
