@@ -9,10 +9,11 @@
     
     <div id="app">
             <book-view
+                v-if="book.show == true"
                 v-for="book in books"
                 v-bind:book="book">
             </book-view>
-            <button v-on:click="dissapear">Show Other Selections</button>
+            <button v-on:click="dissapear" id="show">Show Other Selections</button>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>

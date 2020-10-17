@@ -4,7 +4,7 @@ Vue.component("book-view", {
                 <h2> {{ book.title }} </h2>
                 <h5> by: {{ book.author }} </h5>
                 <h1 style="font-size: 300%"> {{ book.cover }} </h1> 
-              </div>` 
+              </div>`
 })
 
 var app = new Vue({
@@ -17,7 +17,14 @@ var app = new Vue({
     },
     methods: {
         dissapear: function() {
-            
+            if(this.books[1].show == false) {
+                this.books[1].show = true;
+                show.innerHTML = "Hide Other Selections";
+            }
+            else {
+                this.books[1].show = false;
+                show.innerHTML = "Show Other Selections";
+            }
         }
     }
 })
