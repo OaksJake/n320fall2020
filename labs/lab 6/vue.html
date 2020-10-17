@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id="app">
+        {{ message }}
+        <p>{{ purchases }}</p>
+        <ul>
+            <coffee-view
+                v-for="coffee in coffees"
+                v-bind:coffee="coffee"
+                v-bind:key="coffee.id">
+            </coffee-view>
+        </ul>
+        <button v-on:click="buyCoffee">Buy</button>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="js/apple.js"></script>
+</body>
+</html>
