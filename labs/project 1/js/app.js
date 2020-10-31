@@ -365,5 +365,13 @@ function overseer(x, y, position1, position2, id) {
     if(turn >= 10) {
         prompter.innerHTML = "DRAW";
         gameover == true;
+        var body = document.getElementById("body");
+        var button = document.createElement("button");
+        button.innerHTML = "Reset"
+        button.setAttribute("onClick", "window.location.reload()");
+        button.style.fontSize = "24px";
+        button.style.display = "block";
+        button.style.margin = "auto";
+        body.appendChild(button);
     }
 }
