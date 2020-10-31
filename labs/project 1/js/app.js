@@ -2,6 +2,7 @@
 var turn = 1;
 var arr = [["","",""],["","",""],["","",""]];
 var gameover = false;
+var win = false;
 var prompter = document.getElementById("prompt");
 prompter.innerHTML = "It is O's turn";
 
@@ -103,6 +104,7 @@ function overseer(x, y, position1, position2, id) {
                     prompter.innerHTML = "X WINS!";
                     prompter.style.color = "#8afffb";
                     gameover = true;
+                    win = true;
                 }
             }
         }
@@ -119,6 +121,7 @@ function overseer(x, y, position1, position2, id) {
                     prompter.innerHTML = "X WINS!";
                     prompter.style.color = "#8afffb";
                     gameover = true;
+                    win = true;
                 }
             }
         }
@@ -135,6 +138,7 @@ function overseer(x, y, position1, position2, id) {
                     prompter.innerHTML = "X WINS!";
                     prompter.style.color = "#8afffb";
                     gameover = true;
+                    win = true;
                 }
             }
         }
@@ -151,6 +155,7 @@ function overseer(x, y, position1, position2, id) {
                     prompter.innerHTML = "X WINS!";
                     prompter.style.color = "#8afffb";
                     gameover = true;
+                    win = true;
                 }
             }
         }
@@ -167,6 +172,7 @@ function overseer(x, y, position1, position2, id) {
                     prompter.innerHTML = "X WINS!";
                     prompter.style.color = "#8afffb";
                     gameover = true;
+                    win = true;
                 }
             }
         }
@@ -183,6 +189,7 @@ function overseer(x, y, position1, position2, id) {
                     prompter.innerHTML = "X WINS!";
                     prompter.style.color = "#8afffb";
                     gameover = true;
+                    win = true;
                 }
             }
         }
@@ -199,6 +206,7 @@ function overseer(x, y, position1, position2, id) {
                     prompter.innerHTML = "X WINS!";
                     prompter.style.color = "#8afffb";
                     gameover = true;
+                    win = true;
                 }
             }
         }
@@ -215,6 +223,7 @@ function overseer(x, y, position1, position2, id) {
                     prompter.innerHTML = "X WINS!";
                     prompter.style.color = "#8afffb";
                     gameover = true;
+                    win = true;
                 }
             }
         }
@@ -242,6 +251,7 @@ function overseer(x, y, position1, position2, id) {
                     prompter.innerHTML = "O WINS!";
                     prompter.style.color = "#ffcb52";
                     gameover = true;
+                    win = true;
                 }
             }
         }
@@ -258,6 +268,7 @@ function overseer(x, y, position1, position2, id) {
                     prompter.innerHTML = "O WINS!";
                     prompter.style.color = "#ffcb52";
                     gameover = true;
+                    win = true;
                 }
             }
         }
@@ -274,6 +285,7 @@ function overseer(x, y, position1, position2, id) {
                     prompter.innerHTML = "O WINS!";
                     prompter.style.color = "#ffcb52";
                     gameover = true;
+                    win = true;
                 }
             }
         }
@@ -290,6 +302,7 @@ function overseer(x, y, position1, position2, id) {
                     prompter.innerHTML = "O WINS!";
                     prompter.style.color = "#ffcb52";
                     gameover = true;
+                    win = true;
                 }
             }
         }
@@ -306,6 +319,7 @@ function overseer(x, y, position1, position2, id) {
                     prompter.innerHTML = "O WINS!";
                     prompter.style.color = "#ffcb52";
                     gameover = true;
+                    win = true;
                 }
             }
         }
@@ -322,6 +336,7 @@ function overseer(x, y, position1, position2, id) {
                     prompter.innerHTML = "O WINS!";
                     prompter.style.color = "#ffcb52";
                     gameover = true;
+                    win = true;
                 }
             }
         }
@@ -338,6 +353,7 @@ function overseer(x, y, position1, position2, id) {
                     prompter.innerHTML = "O WINS!";
                     prompter.style.color = "#ffcb52";
                     gameover = true;
+                    win = true;
                 }
             }
         }
@@ -354,6 +370,7 @@ function overseer(x, y, position1, position2, id) {
                     prompter.innerHTML = "O WINS!";
                     prompter.style.color = "#ffcb52";
                     gameover = true;
+                    win = true;
                 }
             }
         }
@@ -362,9 +379,12 @@ function overseer(x, y, position1, position2, id) {
     //adds one to the turn counter
     turn++;
     //if the turn counter reaches 10 then there are no more spaces and the game is over
-    if(turn >= 10) {
+    if(turn >= 10 && win == false) {
         prompter.innerHTML = "DRAW";
-        gameover == true;
+        gameover = true;
+    }
+
+    if(gameover == true) {
         var body = document.getElementById("body");
         var button = document.createElement("button");
         button.innerHTML = "Reset"
