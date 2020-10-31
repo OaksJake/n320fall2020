@@ -6,6 +6,7 @@
     <title>Board Game</title>
 
     <style>
+        /*fade class used to make the pieces fade in and out with animation frames lasting a second*/
         .fade {
             animation-name: fadeAnim;
             animation-duration: 1s;
@@ -20,6 +21,7 @@
 </head>
 <body style="background-color: #222222;">
     <div id="board">
+        <!--svg with lines to make the physical aspects of the board as well as transparent rect for the players to click on to update the overseer and add the pieces-->
         <svg style="width: 300px; height: 300px; display: block; margin: auto;" id="playboard">
             <rect x="0" y="0" width="100" height="100" fill="transparent" id="1" onclick="overseer(50, 50, 0, 0, '1')"/>
             <rect x="100" y="0" width="100" height="100" fill="transparent"id="2" onclick="overseer(150, 50, 0, 1, '2')"/>
@@ -36,6 +38,7 @@
             <line x1="0" y1="200" x2="300" y2="200" stroke="#FFFFFF" stroke-weight="5"/>
         </svg>
     </div>
+    <!--text to inform the players of the progress of the game-->
     <div style="text-align: center; padding: 30px; font-size: 30px; color: #FFFFFF;" id="prompt">
         
     </div>
