@@ -72,9 +72,18 @@ function overseer(x, y, position1, position2, id) {
         var x = new ecks(x, y, id);
         arr[position1][position2] = "X";
         x.render();
+        var svg = document.getElementById("playboard");
+        var line = document.createElementNS("http://www.w3.org/2000/svg","line");
         if(arr[0][0] == "X") {
             if(arr[0][1] == "X") {
                 if(arr[0][2] == "X") {
+                    line.setAttribute("x1", 25); 
+                    line.setAttribute("y1", 50);
+                    line.setAttribute("x2", 275);
+                    line.setAttribute("y2", 50);
+                    line.setAttribute("stroke", "#8afffb");
+                    line.setAttribute("stroke-weight", 5);
+                    line.setAttribute("class", "fade");
                     prompter.innerHTML = "X WINS!";
                     prompter.style.color = "#8afffb";
                     gameover = true;
@@ -84,6 +93,13 @@ function overseer(x, y, position1, position2, id) {
         if(arr[1][0] == "X") {
             if(arr[1][1] == "X") {
                 if(arr[1][2] == "X") {
+                    line.setAttribute("x1", 25); 
+                    line.setAttribute("y1", 150);
+                    line.setAttribute("x2", 275);
+                    line.setAttribute("y2", 150);
+                    line.setAttribute("stroke", "#8afffb");
+                    line.setAttribute("stroke-weight", 5);
+                    line.setAttribute("class", "fade");
                     prompter.innerHTML = "X WINS!";
                     prompter.style.color = "#8afffb";
                     gameover = true;
@@ -93,6 +109,13 @@ function overseer(x, y, position1, position2, id) {
         if(arr[2][0] == "X") {
             if(arr[2][1] == "X") {
                 if(arr[2][2] == "X") {
+                    line.setAttribute("x1", 25); 
+                    line.setAttribute("y1", 250);
+                    line.setAttribute("x2", 275);
+                    line.setAttribute("y2", 250);
+                    line.setAttribute("stroke", "#8afffb");
+                    line.setAttribute("stroke-weight", 5);
+                    line.setAttribute("class", "fade");
                     prompter.innerHTML = "X WINS!";
                     prompter.style.color = "#8afffb";
                     gameover = true;
@@ -102,6 +125,13 @@ function overseer(x, y, position1, position2, id) {
         if(arr[0][0] == "X") {
             if(arr[1][0] == "X") {
                 if(arr[2][0] == "X") {
+                    line.setAttribute("x1", 50); 
+                    line.setAttribute("y1", 25);
+                    line.setAttribute("x2", 50);
+                    line.setAttribute("y2", 275);
+                    line.setAttribute("stroke", "#8afffb");
+                    line.setAttribute("stroke-weight", 5);
+                    line.setAttribute("class", "fade");
                     prompter.innerHTML = "X WINS!";
                     prompter.style.color = "#8afffb";
                     gameover = true;
@@ -111,6 +141,13 @@ function overseer(x, y, position1, position2, id) {
         if(arr[0][1] == "X") {
             if(arr[1][1] == "X") {
                 if(arr[2][1] == "X") {
+                    line.setAttribute("x1", 150); 
+                    line.setAttribute("y1", 25);
+                    line.setAttribute("x2", 150);
+                    line.setAttribute("y2", 275);
+                    line.setAttribute("stroke", "#8afffb");
+                    line.setAttribute("stroke-weight", 5);
+                    line.setAttribute("class", "fade");
                     prompter.innerHTML = "X WINS!";
                     prompter.style.color = "#8afffb";
                     gameover = true;
@@ -120,6 +157,13 @@ function overseer(x, y, position1, position2, id) {
         if(arr[0][2] == "X") {
             if(arr[1][2] == "X") {
                 if(arr[2][2] == "X") {
+                    line.setAttribute("x1", 250); 
+                    line.setAttribute("y1", 25);
+                    line.setAttribute("x2", 250);
+                    line.setAttribute("y2", 275);
+                    line.setAttribute("stroke", "#8afffb");
+                    line.setAttribute("stroke-weight", 5);
+                    line.setAttribute("class", "fade");
                     prompter.innerHTML = "X WINS!";
                     prompter.style.color = "#8afffb";
                     gameover = true;
@@ -129,6 +173,13 @@ function overseer(x, y, position1, position2, id) {
         if(arr[0][0] == "X") {
             if(arr[1][1] == "X") {
                 if(arr[2][2] == "X") {
+                    line.setAttribute("x1", 25); 
+                    line.setAttribute("y1", 25);
+                    line.setAttribute("x2", 275);
+                    line.setAttribute("y2", 275);
+                    line.setAttribute("stroke", "#8afffb");
+                    line.setAttribute("stroke-weight", 5);
+                    line.setAttribute("class", "fade");
                     prompter.innerHTML = "X WINS!";
                     prompter.style.color = "#8afffb";
                     gameover = true;
@@ -138,21 +189,38 @@ function overseer(x, y, position1, position2, id) {
         if(arr[2][0] == "X") {
             if(arr[1][1] == "X") {
                 if(arr[0][2] == "X") {
+                    line.setAttribute("x1", 275); 
+                    line.setAttribute("y1", 25);
+                    line.setAttribute("x2", 25);
+                    line.setAttribute("y2", 275);
+                    line.setAttribute("stroke", "#8afffb");
+                    line.setAttribute("stroke-weight", 5);
+                    line.setAttribute("class", "fade");
                     prompter.innerHTML = "X WINS!";
                     prompter.style.color = "#8afffb";
                     gameover = true;
                 }
             }
         }
+        svg.appendChild(line);
     }
     else if(turn % 2 != 0 && gameover == false) {
         prompter.innerHTML = "It is X's turn";
         var o = new ooo(x, y, id);
         arr[position1][position2] = "O";
         o.render();
+        var svg = document.getElementById("playboard");
+        var line = document.createElementNS("http://www.w3.org/2000/svg","line");
         if(arr[0][0] == "O") {
             if(arr[0][1] == "O") {
                 if(arr[0][2] == "O") {
+                    line.setAttribute("x1", 25); 
+                    line.setAttribute("y1", 50);
+                    line.setAttribute("x2", 275);
+                    line.setAttribute("y2", 50);
+                    line.setAttribute("stroke", "#ffcb52");
+                    line.setAttribute("stroke-weight", 5);
+                    line.setAttribute("class", "fade");
                     prompter.innerHTML = "O WINS!";
                     prompter.style.color = "#ffcb52";
                     gameover = true;
@@ -162,6 +230,13 @@ function overseer(x, y, position1, position2, id) {
         if(arr[1][0] == "O") {
             if(arr[1][1] == "O") {
                 if(arr[1][2] == "O") {
+                    line.setAttribute("x1", 25); 
+                    line.setAttribute("y1", 150);
+                    line.setAttribute("x2", 275);
+                    line.setAttribute("y2", 150);
+                    line.setAttribute("stroke", "#ffcb52");
+                    line.setAttribute("stroke-weight", 5);
+                    line.setAttribute("class", "fade");
                     prompter.innerHTML = "O WINS!";
                     prompter.style.color = "#ffcb52";
                     gameover = true;
@@ -171,6 +246,13 @@ function overseer(x, y, position1, position2, id) {
         if(arr[2][0] == "O") {
             if(arr[2][1] == "O") {
                 if(arr[2][2] == "O") {
+                    line.setAttribute("x1", 25); 
+                    line.setAttribute("y1", 250);
+                    line.setAttribute("x2", 275);
+                    line.setAttribute("y2", 250);
+                    line.setAttribute("stroke", "#ffcb52");
+                    line.setAttribute("stroke-weight", 5);
+                    line.setAttribute("class", "fade");
                     prompter.innerHTML = "O WINS!";
                     prompter.style.color = "#ffcb52";
                     gameover = true;
@@ -180,6 +262,13 @@ function overseer(x, y, position1, position2, id) {
         if(arr[0][0] == "O") {
             if(arr[1][0] == "O") {
                 if(arr[2][0] == "O") {
+                    line.setAttribute("x1", 50); 
+                    line.setAttribute("y1", 25);
+                    line.setAttribute("x2", 50);
+                    line.setAttribute("y2", 275);
+                    line.setAttribute("stroke", "#ffcb52");
+                    line.setAttribute("stroke-weight", 5);
+                    line.setAttribute("class", "fade");
                     prompter.innerHTML = "O WINS!";
                     prompter.style.color = "#ffcb52";
                     gameover = true;
@@ -189,6 +278,13 @@ function overseer(x, y, position1, position2, id) {
         if(arr[0][1] == "O") {
             if(arr[1][1] == "O") {
                 if(arr[2][1] == "O") {
+                    line.setAttribute("x1", 150); 
+                    line.setAttribute("y1", 25);
+                    line.setAttribute("x2", 150);
+                    line.setAttribute("y2", 275);
+                    line.setAttribute("stroke", "#ffcb52");
+                    line.setAttribute("stroke-weight", 5);
+                    line.setAttribute("class", "fade");
                     prompter.innerHTML = "O WINS!";
                     prompter.style.color = "#ffcb52";
                     gameover = true;
@@ -198,6 +294,13 @@ function overseer(x, y, position1, position2, id) {
         if(arr[0][2] == "O") {
             if(arr[1][2] == "O") {
                 if(arr[2][2] == "O") {
+                    line.setAttribute("x1", 250); 
+                    line.setAttribute("y1", 25);
+                    line.setAttribute("x2", 250);
+                    line.setAttribute("y2", 275);
+                    line.setAttribute("stroke", "#ffcb52");
+                    line.setAttribute("stroke-weight", 5);
+                    line.setAttribute("class", "fade");
                     prompter.innerHTML = "O WINS!";
                     prompter.style.color = "#ffcb52";
                     gameover = true;
@@ -207,6 +310,13 @@ function overseer(x, y, position1, position2, id) {
         if(arr[0][0] == "O") {
             if(arr[1][1] == "O") {
                 if(arr[2][2] == "O") {
+                    line.setAttribute("x1", 25); 
+                    line.setAttribute("y1", 25);
+                    line.setAttribute("x2", 275);
+                    line.setAttribute("y2", 275);
+                    line.setAttribute("stroke", "#ffcb52");
+                    line.setAttribute("stroke-weight", 5);
+                    line.setAttribute("class", "fade");
                     prompter.innerHTML = "O WINS!";
                     prompter.style.color = "#ffcb52";
                     gameover = true;
@@ -216,12 +326,20 @@ function overseer(x, y, position1, position2, id) {
         if(arr[2][0] == "O") {
             if(arr[1][1] == "O") {
                 if(arr[0][2] == "O") {
+                    line.setAttribute("x1", 275); 
+                    line.setAttribute("y1", 25);
+                    line.setAttribute("x2", 25);
+                    line.setAttribute("y2", 275);
+                    line.setAttribute("stroke", "#ffcb52");
+                    line.setAttribute("stroke-weight", 5);
+                    line.setAttribute("class", "fade");
                     prompter.innerHTML = "O WINS!";
                     prompter.style.color = "#ffcb52";
                     gameover = true;
                 }
             }
         }
+        svg.appendChild(line);
     }
     turn++;
     if(turn >= 10) {
