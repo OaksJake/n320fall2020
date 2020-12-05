@@ -75,6 +75,7 @@ class ooo {
 //this function is the entirety of how the game functions and becomes a game, it requires a x, y and id to feed to the ecks or ooo class as well as positions 1 and 2 for
 //proper placement within the array used to keep track of where each piece is
 function overseer(x, y, position1, position2, id) {
+    console.log(arr);
     //if the turn is an even number than X goes as long as the game has not already ended
     if(turn % 2 == 0 && gameover == false) {
         //this changes the prompter to the opposite players turn as this all happens simulataniously so it shows up after the player has alrwady clicked
