@@ -1,0 +1,5 @@
+[
+    {"name": "Asylum Demon", "health": 825, "souls": 2000},
+    {"name": "Taurus Demon", "health": 1215, "souls": 3000},
+    {"name": "Bell Gargoyels", "health": "1000/480", "souls": 10000}
+]
